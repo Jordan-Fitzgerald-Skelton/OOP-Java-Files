@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Q2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+      <script>
+          //q1
+      let num1 = 8;
+      while (i < 21) {
+        alert(num1 * i);
+        i++;
+      }
+      //q2
+      for (var j = 50; j >=0; j--){
+        alert(j);
+    }
+    //q3
+    function checkInputIsNumber(){
+     var value = parseFloat(prompt("Enter a number: ")); 
+      if (isNaN(value)){
+         alert("Please Provide the input as a number");
+         return false;
+      }else{
+          while(i < 20){
+              alert(value * i);
+          }
+      }
+    }
+    //q4
+    let text = "";
+    animals.forEach(myFunction);
+    const cars = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "abc", "true"];
+    document.getElementById("demo").innerHTML = text;
+
+    function myFunction(item, index) {
+      alert(index + " " + item);
+    }
+         
+    //q5
+    var isRaining = prompt("Enter true or false for if its raining ");
+    var isDaylight = prompt("Enter true or false for if its daylight ");
+    !!isRaining;
+    !!isDaylight;
+    
+    if (isRaining === true && isDaylight === true){
+        alert("Wear a raincoat");
+    }else if(isRaining === false && isDaylight === true){
+        alert("Go for a walk");
+    }else if(isRaining === true && isDaylight === false){
+        alert("Stay indoors");
+    }else if(isRaining === false && isDaylight === false){
+        alert("Sit outside");
+    }
+    
+    </script>
+    
+    </body>
+</html>

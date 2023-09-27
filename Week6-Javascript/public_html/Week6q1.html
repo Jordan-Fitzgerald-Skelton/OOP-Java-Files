@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/html.html to edit this template
+-->
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var F = parseFloat(prompt("Enter the temperature in fahrenheit so it can be converted: "));
+            var C =(5 * (F - 32)) / 9 ;
+            alert("The temperature in celsius = " + C);
+            
+            var euro = parseFloat(prompt("Enter the amount in euros that you wish to convert: "));
+            var Krona = euro * 0.093;
+            alert("you have " + Krona + " Krona");
+            const showImage = () => {
+                document.getElementById("first").style.display ='block';
+            };
+
+        </script>
+        <button onClick="showImage()">Button</button>
+        <div id="first" style="height:400px; width:400px; display:none;">
+            <img src="/Web-application-development/swedish-flag.jpg" alt="Swedish flag"/>
+        </div>
+    </body>
+</html>

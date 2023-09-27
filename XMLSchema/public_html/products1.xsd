@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/XML/XmlSchema.xsd to edit this template
+-->
+
+<xs:schema version="1.0"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           elementFormDefault="qualified">
+    
+    <xs:element name="vendor_name" type="xs:string"/>
+    <xs:element name="ad_sentence" type="xs:string"/>
+    <xs:element name="short_desc" type="xs:string"/>
+    <xs:element name="giveaway_item" type="xs:string"/>
+    <xs:element name="giveaway_desc" type="xs:string"/>
+    <xs:element name="long_desc" type="xs:string"/>
+    <xs:element name="product_id" type="xs:string"/>
+    <xs:element name="product_desc" type = "xs:string"/>
+    
+    <xs:element name="giveaway">
+        <xs:complexType>
+            <xs:sequence>
+            <xs:element name="giveaway_item" type="xs:string"/>
+            <xs:element name="giveaway_desc" type="xs:string"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="vendor">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="vendor_name"/>
+                <xs:element ref="advertisement"/>
+                <xs:element ref="suit"/>
+                <xs:element ref="product"/>
+            </xs:sequence>
+            <xs:attribute name="webvendor" type="xsd:string" use="required"/>
+            <xs:attribute name="id" type="xsd:ID" use="required" />
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="product">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="product_id"/>
+                <xs:element ref="short_desc"/>
+                <xs:element ref="product_desc"/>
+                <xs:element ref="price"/>
+                <xs:element ref="item"/>
+                <xs:element ref="inventory"/>
+                <xs:element ref="giveaway"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    
+    <xs:element name="inventory">
+        <xs:complexType>
+            <xs:simpleContent>
+                <xs:extension base="xsd:integer">
+                    <xs:attribute name="location" default="warehouse">
+                        <xs:simpleType>
+                            <xs:restriction base="xsd:string">
+                                <xs:enumeration value="warehouse"/>
+                                <xs:enumeration value="showroom"/>
+                            </xs:restriction>
+                        </xs:simpleType>
+                    </xs:attribute>
+                    <xs:attribute name="color" type="xsd:string" >
+                    </xs:attribute>
+                </xs:extension>
+            </xs:simpleContent>
+        </xs:complexType>
+  </xs:element>
+    
+</xs:schema>
